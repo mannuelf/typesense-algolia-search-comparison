@@ -1,11 +1,62 @@
 {
+  "name": "news-clone",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "start": "snowpack dev",
-    "build": "snowpack build",
-    "indexer": "node scripts/populateTypesenseIndex.js",
-    "typesenseServer": "docker run -i -p 8108:8108 -v`pwd`/typesense-server-data/:/data typesense/typesense:0.22.0.rcu6 --data-dir /data --api-key=Hu52dwsas2AdxdE --listen-port 8108 --enable-cors"
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "react-scripts eject",
+    "snyk:test": "snyk test"
+  },
+  "dependencies": {
+    "@craco/craco": "^6.2.0",
+    "@heroicons/react": "^1.0.2",
+    "@tailwindcss/forms": "^0.3.3",
+    "@tailwindcss/postcss7-compat": "npm:@tailwindcss/postcss7-compat@^2.0.2",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
+    "@testing-library/user-event": "^13.1.9",
+    "@types/jest": "^26.0.24",
+    "@types/node": "^16.3.1",
+    "@types/react": "^17.0.14",
+    "@types/react-dom": "^17.0.9",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.1",
+    "node-sass": "6.0.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-moment": "^1.1.1",
+    "react-redux": "^7.2.4",
+    "react-scripts": "4.0.3",
+    "redux": "^4.1.0",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.3.0",
+    "typescript": "^4.3.5",
+    "web-vitals": "^2.1.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "devDependencies": {
-    "snowpack": "^3.3.7"
+    "autoprefixer": "^9",
+    "postcss": "^7",
+    "snyk": "^1.658.0",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   }
 }
