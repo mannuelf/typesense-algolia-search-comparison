@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "start": "snowpack dev",
+    "build": "snowpack build",
+    "test": "echo \"This template does not include a test runner by default.\" && exit 1",
+    "indexer": "node scripts/populateTypesenseIndex.js",
+    "typesenseServer": "docker run -i -p 8108:8108 -v`pwd`/typesense-server-data/:/data typesense/typesense:0.22.0.rcu6 --data-dir /data --api-key=Hu52dwsas2AdxdE --listen-port 8108 --enable-cors"
+  },
+  "devDependencies": {
+    "snowpack": "^3.3.7"
+  },
+  "dependencies": {
+    "react-instantsearch-dom": "^6.12.1",
+    "rheostat": "^4.1.1",
+    "typesense-instantsearch-adapter": "^2.1.0"
+  }
+}
