@@ -1,28 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import './App.css';
 
-function App() {
-  // Create the count state.
-  const [count, setCount] = useState(0);
-  // Create the counter (+1 every second).
-  useEffect(() => {
-    const timer = setTimeout(() => setCount(count + 1), 1000);
-    return () => clearTimeout(timer);
-  }, [count, setCount]);
-  // Return the App component.
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.jsx</code> and save to reload.
-        </p>
-        <p>
-          Page has been open for <code>{count}</code> seconds.
-        </p>
-        <p>Learn React</p>
+    <div className="container mx-auto">
+      <header className="p-4 border-b border-gray-300">
+        <h1 className="text-xl">Typesense Demo</h1>
       </header>
+      <main className="main">
+        <div>
+          <form action=""></form>
+        </div>
+        <div className="grid grid-flow-col auto-cols-max gap-1">
+          <div className="placeholder-gray-200::placeholder	">1</div>
+        </div>
+      </main>
     </div>
   );
 }
-
-export default App;
