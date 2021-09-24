@@ -1,24 +1,51 @@
-# New Project
+# TypeScript NewsAPI demo
 
-> ✨ Bootstrapped with Create Snowpack App (CSA).
+> A wall of news headlines in react and typescript.
 
-## Available Scripts
+For education purposes and fun.
 
-### npm start
+What it looks like:
 
-Runs the app in the development mode.
-Open http://localhost:8080 to view it in the browser.
+<img src="./.readme/cover.png" width="100%">
 
-The page will reload if you make edits.
-You will also see any lint errors in the console.
+## How to start app
 
-### npm run build
+1. signup and create an API key for yourself on newsapi.org
+2. create a `.env` file in the root of the project
+3. run `yarn` to install dependencies.
 
-Builds a static copy of your site to the `build/` folder.
-Your app is ready to be deployed!
+Grab an API key from [www.newsapi.org](https://newsapi.org/docs/get-started) and put in your `.env` file in your root directory.
 
-**For the best production performance:** Add a build bundler plugin like [@snowpack/plugin-webpack](https://github.com/snowpackjs/snowpack/tree/main/plugins/plugin-webpack) or [snowpack-plugin-rollup-bundle](https://github.com/ParamagicDev/snowpack-plugin-rollup-bundle) to your `snowpack.config.mjs` config file.
+## .env
 
-### Q: What about Eject?
+Create .env in the root of your project.
 
-No eject needed! Snowpack guarantees zero lock-in, and CSA strives for the same.
+```bash
+REACT_APP_API_KEY=abcdefghijklmnopqrstuvwxyz
+```
+
+## yarn or npm install
+
+```bash
+yarn
+```
+
+OR
+
+```bash
+npm install
+```
+
+## yarn start
+
+Check the package.json file for all availabale scripts.
+
+```bash
+yarn start
+```
+
+read more: [www.npmjs.com/package/dotenv](https://www.npmjs.com/package/dotenv)
+
+### Built with Create React App
+
+See the [documentation](https://facebook.github.io/create-react-app/) for more information.
