@@ -1,19 +1,33 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { InstantSearch, SearchBox, Hits } from 'react-instantsearch-dom';
+import TypesenseInstantSearchAdapter from 'typesense-instantsearch-adapter';
+
+const typesenseInstantsearchAdapter = new TypesenseInstantSearchAdapter({
+  server: {
+    apiKey: 'xyz', // Be sure to use an API key that only allows search operations
+    nodes: [
+      {
+        host: 'localhost',
+        port: '8108',
+        protocol: 'http',
+      },
+    ],
+    cacheSearchResultsForSeconds: 2 * 60, // Cache search results from server. Defaults to 2 minutes. Set to 0 to disable caching.
+  },
+  // The following parameters are directly passed to Typesense's search API endpoint.
+  //  So you can pass any parameters supported by the search endpoint below.
+  //  queryBy is required.
+  additionalSearchParameters: {
+    queryBy: 'name,description,categories',
+  },
+});
+const searchClient = typesenseInstantsearchAdapter.searchClient;
 
 export default function App() {
   return (
-    <div className="container mx-auto">
-      <header className="p-4 border-b border-gray-300">
-        <h1 className="text-xl">Typesense Demo</h1>
-      </header>
-      <main className="main">
-        <div>
-          <form action=""></form>
-        </div>
-        <div className="grid grid-flow-col auto-cols-max gap-1">
-          <div className="placeholder-gray-200::placeholder	">1</div>
-        </div>
-      </main>
-    </div>
+    <InstantSearch indexName="products" searchClient={searchClient}>
+      <SearchBox />
+      <Hits />
+    </InstantSearch>
   );
 }

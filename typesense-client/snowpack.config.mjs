@@ -19,7 +19,7 @@ export default {
     // "bundle": true,
   },
   packageOptions: {
-    /* ... */
+    knownEntryPoints: ['react-dom/server'],
   },
   devOptions: {
     /* ... */
