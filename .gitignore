@@ -26,4 +26,4 @@ yarn-debug.log*
 yarn-error.log*
 
 # typesense data, will be generated on user command
-typesense-server-data
+/typesense-server-data
