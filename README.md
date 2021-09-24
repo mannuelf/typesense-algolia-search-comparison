@@ -1,3 +1,3 @@
-# typesense algolia search comparison
+# Typesense and Algolia search comparison
 
 Comparing Typesense with Algolia search.
