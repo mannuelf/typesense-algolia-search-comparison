@@ -1,6 +1,6 @@
 # Typesense and Algolia search comparison
 
-Comparing Typesense with Algolia search. Each folder has it's README and build process happy reading.
+Comparing Typesense with Algolia search. Each folder has its' own README and build process happy reading.
 
 ## Credits
 
