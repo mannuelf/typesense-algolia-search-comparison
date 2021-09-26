@@ -1,0 +1,93 @@
+.container {
+  margin-top: 1em;
+}
+
+.ais-SearchBox-form {
+  display: flex;
+}
+
+.ais-SearchBox-form input {
+  margin-right: 0.5em;
+}
+
+.ais-Hits-list {
+  display: grid;
+  column-gap: 2em;
+  row-gap: 2em;
+  align-items: stretch;
+  list-style-type: none;
+}
+
+.ais-Hits-list h4 {
+  font-weight: 400;
+}
+
+.heading {
+  font-weight: 300;
+  border-bottom: 1px dotted rgb(206, 206, 206);
+}
+
+.sub-heading {
+  display: block;
+  font-size: 0.7em;
+  position: relative;
+  bottom: 11px;
+  left: 0em;
+}
+
+input[type='color']:focus,
+input[type='date']:focus,
+input[type='datetime']:focus,
+input[type='datetime-local']:focus,
+input[type='email']:focus,
+input[type='month']:focus,
+input[type='number']:focus,
+input[type='password']:focus,
+input[type='search']:focus,
+input[type='tel']:focus,
+input[type='text']:focus,
+input[type='url']:focus,
+input[type='week']:focus,
+input:not([type]):focus,
+textarea:focus,
+select:focus {
+  border-color: #44c4da;
+}
+
+.button,
+button,
+input[type='button'],
+input[type='reset'],
+input[type='submit'] {
+  background-color: #1335bc;
+  border: 0.1rem solid #1335bc;
+  color: #fff;
+}
+
+.ais-SearchBox-submitIcon {
+  fill: #fff;
+  width: 16px;
+  height: 16px;
+  margin-top: 10px;
+}
+.ais-SearchBox-reset {
+  fill: #fff;
+}
+
+@media screen and (min-width: 567px) {
+  .ais-Hits-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 2em;
+    row-gap: 2em;
+    align-items: stretch;
+    list-style-type: none;
+  }
+  .sub-heading {
+    display: inline;
+    font-size: 0.7em;
+    position: relative;
+    bottom: 11px;
+    left: 0.5em;
+  }
+}

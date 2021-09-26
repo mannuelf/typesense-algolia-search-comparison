@@ -1,6 +1,8 @@
 import React from 'react';
 import { InstantSearch, SearchBox, Hits } from 'react-instantsearch-dom';
 import TypesenseInstantSearchAdapter from 'typesense-instantsearch-adapter';
+import './App.css';
+import Hit from '../Hit';
 
 const typesenseInstantsearchAdapter = new TypesenseInstantSearchAdapter({
   server: {
@@ -25,9 +27,18 @@ const searchClient = typesenseInstantsearchAdapter.searchClient;
 
 export default function App() {
   return (
-    <InstantSearch indexName="products" searchClient={searchClient}>
-      <SearchBox />
-      <Hits />
-    </InstantSearch>
+    <div className="container">
+      <InstantSearch indexName="products" searchClient={searchClient}>
+        <h1 className="heading">
+          <img
+            src="https://res.cloudinary.com/mannuel/image/upload/v1632639615/images/typesense_logo.svg"
+            width="220"
+          />
+          <small className="sub-heading">React Client</small>
+        </h1>
+        <SearchBox />
+        <Hits hitComponent={Hit} />
+      </InstantSearch>
+    </div>
   );
 }
