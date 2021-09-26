@@ -1,6 +1,6 @@
 # Typesense and Algolia search comparison
 
-Comparing Typesense with Algolia search.
+Comparing Typesense with Algolia search. Each folder has it's README and build process happy reading.
 
 ## Credits
 
@@ -10,4 +10,4 @@ The dataset used in this showcase is from Algolia's public set of datasets liste
 
 ### Typesense
 
-The indexer code written by [Jason Bosco](https://github.com/typesense/showcase-nextjs-typesense-ecommerce-store)
+The indexer code provided by [Jason Bosco](https://github.com/typesense/showcase-nextjs-typesense-ecommerce-store)
