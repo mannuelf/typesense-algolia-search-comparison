@@ -1,18 +1,44 @@
-# New Project
+# Typesense React Client
 
-> ✨ Bootstrapped with Create Snowpack App (CSA).
+> ✨ Bootstrapped with [Create Snowpack App (CSA)](https://www.snowpack.dev).
 
 ## Available Scripts
 
-### npm start
+Run the following scripts in multiple tabs in the order they appear here:
+
+```bash
+yarn
+```
+
+Yarn, to install all dependencies.
+
+```bash
+yarn typesenseServer
+```
+
+Pulls down a Typesense Docker image (v0.22.0.rcu6), sets a local data directory, maps it to the container and starts the container. Container is running on port 8180.
+
+```bash
+yarn indexer
+```
+
+Indexes the demo ecommerce data into Typesense. Thanks to [Jason Bosco](https://github.com/typesense/showcase-nextjs-typesense-ecommerce-store) for this.
+
+> 🚨 Note: environment variables are dangerously set to `process.env.SNOWPACK_PUBLIC_` and should be b deployed to production servers in this state.
+
+```bash
+yarn start
+```
 
 Runs the app in the development mode.
-Open http://localhost:8080 to view it in the browser.
+Open [http://localhost:8080](http://localhost:8080s) to view it in the browser.
 
 The page will reload if you make edits.
 You will also see any lint errors in the console.
 
-### npm run build
+```bash
+yarn build
+```
 
 Builds a static copy of your site to the `build/` folder.
 Your app is ready to be deployed!
