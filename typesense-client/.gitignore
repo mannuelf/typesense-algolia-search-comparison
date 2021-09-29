@@ -1,4 +1,6 @@
 .snowpack
 build
 /node_modules
+
+# typesense data, will be generated on user comman
 /typesense-server-data
