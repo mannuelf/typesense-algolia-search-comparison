@@ -22,7 +22,7 @@ Pulls down a Typesense Docker image (v0.22.0.rcu6), sets a local data directory,
 yarn indexer
 ```
 
-Indexes the demo ecommerce data into Typesense. Thanks to [Jason Bosco](https://github.com/typesense/showcase-nextjs-typesense-ecommerce-store) for this.
+Indexes the demo ecommerce data into Typesense. Thanks to [@jasonbosco](https://github.com/jasonbosco) for this.
 
 > 🚨 Note: environment variables are dangerously set to `process.env.SNOWPACK_PUBLIC_` and should be b deployed to production servers in this state.
 
@@ -43,8 +43,10 @@ yarn build
 Builds a static copy of your site to the `build/` folder.
 Your app is ready to be deployed!
 
+### Snowpack.dev
+
 **For the best production performance:** Add a build bundler plugin like [@snowpack/plugin-webpack](https://github.com/snowpackjs/snowpack/tree/main/plugins/plugin-webpack) or [snowpack-plugin-rollup-bundle](https://github.com/ParamagicDev/snowpack-plugin-rollup-bundle) to your `snowpack.config.mjs` config file.
 
-### Q: What about Eject?
+#### Q: What about Eject?
 
 No eject needed! Snowpack guarantees zero lock-in, and CSA strives for the same.
