@@ -2,7 +2,7 @@
 
 Comparing Typesense with Algolia search.
 
-Each folder has it's own README and build process happy reading.
+Each folder has it's own README and build process happy reading. Change directory and run each project independently.
 
 ## Credits
 

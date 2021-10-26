@@ -4,7 +4,7 @@
   "private": true,
   "main": "src/app.js",
   "scripts": {
-    "start": "parcel index.html --port 3000",
+    "start": "parcel index.html",
     "build": "parcel build index.html",
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix"
