@@ -1,7 +1,7 @@
 {
   "name": "typesense-react-client",
   "description": "Typesense and React demo.",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "MIT",
   "homepage": "https://mannuelferreira.com",
   "repository": {
@@ -9,9 +9,9 @@
     "url": "https://github.com/mannuelf/typesense-algolia-search-comparison",
     "directory": "typesense-client"
   },
+  "type": "module",
   "scripts": {
-    "start": "snowpack dev",
-    "build": "snowpack build",
+    "start": "node ./esbuild.config.js -w",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
     "lint": "prettier --check \"src/**/*.{js,jsx}\"",
     "test": "web-test-runner \"src/**/*.test.jsx\"",
@@ -19,27 +19,24 @@
     "typesenseServer": "docker run -i -p 8108:8108 -v`pwd`/typesense-server-data/:/data typesense/typesense:0.22.0.rcu6 --data-dir /data --api-key=xyz --listen-port 8108 --enable-cors"
   },
   "devDependencies": {
-    "@babel/plugin-syntax-jsx": "^7.14.5",
-    "@babel/preset-react": "^7.14.5",
-    "@snowpack/plugin-babel": "^2.1.7",
-    "@snowpack/plugin-dotenv": "^2.1.0",
-    "@snowpack/plugin-react-refresh": "^2.5.0",
-    "@snowpack/plugin-webpack": "^3.0.0",
-    "@snowpack/web-test-runner-plugin": "^0.2.2",
     "@testing-library/react": "^12.1.2",
     "@web/test-runner": "^0.13.20",
     "chai": "^4.3.4",
-    "prettier": "^2.2.1",
-    "snowpack": "^3.8.0"
+    "esbuild-plugin-pipe": "^0.2.0",
+    "esbuild-serve": "^1.0.1",
+    "prettier": "^2.2.1"
   },
   "dependencies": {
-    "dotenv": "^10.0.0",
+    "@babel/runtime": "^7.20.7",
+    "algoliasearch": "^4.14.3",
+    "dotenv": "^16.0.3",
+    "esbuild": "^0.16.10",
     "milligram": "^1.4.1",
     "normalize.css": "^8.0.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-instantsearch-dom": "^6.14.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-instantsearch-dom": "^6.38.1",
     "rheostat": "^4.1.1",
-    "typesense-instantsearch-adapter": "^2.2.0"
+    "typesense-instantsearch-adapter": "^2.4.2"
   }
 }

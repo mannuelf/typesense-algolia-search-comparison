@@ -1,17 +1,16 @@
-import React from 'react';
-import { InstantSearch, SearchBox, Hits } from 'react-instantsearch-dom';
-import TypesenseInstantSearchAdapter from 'typesense-instantsearch-adapter';
-import './App.css';
-import Hit from '../Hit';
-
-const typesenseInstantsearchAdapter = new TypesenseInstantSearchAdapter({
+import React from "react";
+import { InstantSearch, SearchBox, Hits } from "react-instantsearch-dom";
+import TypesenseInstantsearchAdapter from "typesense-instantsearch-adapter";
+import "./App.css";
+import Hit from "../Hit";
+const typesenseInit = new TypesenseInstantsearchAdapter({
   server: {
-    apiKey: 'xyz', // Be sure to use an API key that only allows search operations
+    apiKey: "xyz", // Be sure to use an API key that only allows search operations
     nodes: [
       {
-        host: 'localhost',
-        port: '8108',
-        protocol: 'http',
+        host: "localhost",
+        port: "8108",
+        protocol: "http",
       },
     ],
     cacheSearchResultsForSeconds: 2 * 60, // Cache search results from server. Defaults to 2 minutes. Set to 0 to disable caching.
@@ -20,10 +19,15 @@ const typesenseInstantsearchAdapter = new TypesenseInstantSearchAdapter({
   //  So you can pass any parameters supported by the search endpoint below.
   //  queryBy is required.
   additionalSearchParameters: {
-    queryBy: 'name,description,categories',
+    queryBy: "name,description,categories",
   },
 });
-const searchClient = typesenseInstantsearchAdapter.searchClient;
+
+console.log("*️⃣", typeof typesenseInit, typesenseInit);
+
+const searchClient = typesenseInit.searchClient;
+
+console.log("*️⃣", typeof searchClient, searchClient);
 
 export default function App() {
   return (
@@ -36,8 +40,8 @@ export default function App() {
           />
           <small className="sub-heading">React Client</small>
         </h1>
-        <SearchBox />
-        <Hits hitComponent={Hit} />
+        {<SearchBox />}
+        {<Hits hitComponent={Hit} />}
       </InstantSearch>
     </div>
   );

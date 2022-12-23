@@ -32,7 +32,7 @@ Indexes the demo ecommerce data into Typesense. Thanks to [@jasonbosco](https://
 > 🚨 Note: environment variables are dangerously set to `process.env.SNOWPACK_PUBLIC_` and should not be deployed to production servers in this demonstration state.
 
 ```bash
-SNOWPACK_PUBLIC_TYPESENSE_HOST=localhost
+TYPESENSE_HOST=localhost
 SNOWPACK_PUBLIC_TYPESENSE_PORT=8108
 SNOWPACK_PUBLIC_TYPESENSE_PROTOCOL=http
 SNOWPACK_PUBLIC_TYPESENSE_SEARCH_ONLY_API_KEY=xyz
